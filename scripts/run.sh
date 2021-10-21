@@ -7,4 +7,7 @@ then
 
 fi 
 
+echo "Activating Python virtual environment..."
 source ./bitna_env/Scripts/activate
+
+echo "Running Django server"
