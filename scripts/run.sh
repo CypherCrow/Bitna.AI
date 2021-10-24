@@ -4,7 +4,7 @@
 
 if []
 then 
-
+    echo "It seems one or none of the dependences are installed. Run script 'install' to do so."
 fi 
 
 echo "Activating Python virtual environment..."
