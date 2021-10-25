@@ -17,5 +17,6 @@ Regarding the same phase, run this command: `./scripts/install.bat`
 
 ## Features
 
+* Test dataset uploader
 * Efficient machine learning model. 
 * New topic training. Have a page to upload a topic name and training dataset. 
