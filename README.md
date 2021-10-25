@@ -1,4 +1,4 @@
-# bitna.ai
+# Bitna.AI
 A machine learning project for the 2021 PyTorch Annual Hackathon
 
 ## Setup
