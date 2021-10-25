@@ -2,4 +2,8 @@
 
 title bitna 
 
-if [%1] == [] 
+:: Following flags applied 
+::
+
+if [%1] == [] echo "Usage: bitna <command>"
+
