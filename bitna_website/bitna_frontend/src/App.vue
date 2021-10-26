@@ -1,9 +1,6 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png"> ---> 
   <div id="app"> 
-    <div id="nav">
-      <router-link to="/bitna">Home</router-link> 
-    </div>
     <router-view /> 
   </div>
 </template>
