@@ -12,8 +12,15 @@ module.exports = {
                 changeOrigin: true
             }
         }
+    },
+    /* 
+    chainWebpack: config => {
+        config.module
+            .rule('images')
+                .use('url-loader')
+                    .loader('url-loader')
+                    .tap(options => )
     }
-    /*
     publicPath: process.env.NODE_ENV === 'production' ? DEPLOYMENT_PATH : 'http://localhost:8000', 
     outputDir: '../bitna_website/static/dist',
 

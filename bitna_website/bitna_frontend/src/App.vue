@@ -1,6 +1,7 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png"> ---> 
   <div id="app"> 
+    <!-- <img :src="`${publicPath}my-image.png`"> -->
     <router-view /> 
   </div>
 </template>
@@ -10,7 +11,10 @@
 
 export default {
   name: 'App',
-  components: {
+  data(){
+    return {
+      publicPath: process.env.BASE_URL
+    }
   }
 }
 </script>

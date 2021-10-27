@@ -28,9 +28,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
+# Application youdefinition
 
 INSTALLED_APPS = [
+    'bitna_web_app.apps.BitnaWebAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
