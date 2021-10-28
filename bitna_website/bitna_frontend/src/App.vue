@@ -1,8 +1,8 @@
-<template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> ---> 
+<template> 
   <div id="app"> 
-    <!-- <img :src="`${publicPath}my-image.png`"> -->
-    <router-view /> 
+    <transition name="fade">
+      <router-view /> 
+    </transition>
   </div>
 </template>
 
@@ -27,5 +27,20 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+header {
+    margin: 40px 0px;
+    font-size: 30px;  
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition-duration: 0.3s; 
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0; 
 }
 </style>
