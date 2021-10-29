@@ -1,8 +1,10 @@
 <template> 
   <div id="app"> 
-    <transition name="fade">
-      <router-view /> 
-    </transition>
+    <router-view v-slot="{ Component, route }"> 
+      <transition :name="route.meta.transition"> 
+        <component :is="Component" /> 
+      </transition>
+    </router-view>
   </div>
 </template>
 

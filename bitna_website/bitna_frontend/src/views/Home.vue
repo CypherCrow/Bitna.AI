@@ -1,18 +1,25 @@
 <template>
     <div id="home"> 
-        <section>
+        <section> <!-- A personal assistant software --> 
             <p id="title">Bitna.AI</p>
             <p id="subtitle">Shining new information and models everyday</p>
             <img src="../assets/bitna_ai_logo.jpg" alt="Bitna.AI Logo" />
         </section>
 
-        <header>Links</header>
-        <div id="buttons">
-            <Button @click="toDatasets()" name="Datasets" color="#FF5349" />
-            <Button @click="toModels()" name="Models" color="#FF5349" />
+        <div id="TwoLinks">
+            <header>What Do You Want to Check Out?</header>
+            <div class="linkSection">
+                <Button @click="toDatasets()" name="Datasets" color="#FF5349" />
+                <Button @click="toModels()" name="Models" color="#FF5349" />
+            </div>
         </div>
 
-        <header>New User? No Worries!</header>
+        <div id="OneLink">
+            <header>New User? No Worries!</header>
+            <div class="linkSection">
+                <Button @click="toTutorial()" name="Tutorial" color="#FF5349" />
+            </div> 
+        </div>
     </div> 
 </template>
 
@@ -30,6 +37,9 @@ export default {
         }, 
         toModels(){
             this.$router.push('/models')
+        }, 
+        toTutorial(){
+            this.$router.push('/tutorial')
         }
     }
 }
@@ -46,7 +56,7 @@ p#subtitle {
     font-size: 20px; 
 }
 
-div#buttons {
+.linkSection {
     display: flex; 
     justify-content: center;
 }
