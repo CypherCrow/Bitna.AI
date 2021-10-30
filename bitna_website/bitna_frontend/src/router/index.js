@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '../views/Home'
-import DatasetsMain from '../views/DatasetsMain'
-import DatasetCreation from '../views/DatasetCreation'
-import DatasetsView from '../views/DatasetsView'
-import ModelsMain from '../views/ModelsMain'
-import ModelCreation from '../views/ModelCreation'
-import ModelsView from '../views/ModelsView'
+import DatasetsMain from '../views/Datasets/DatasetsMain'
+import DatasetCreation from '../views/Datasets/DatasetCreation'
+import DatasetsView from '../views/Datasets/DatasetsView'
+import DatasetUpload from '../views/Datasets/DatasetUpload'
+import ModelsMain from '../views/Models/ModelsMain'
+import ModelCreation from '../views/Models/ModelCreation'
+import ModelsView from '../views/Models/ModelsView'
 import Tutorial from '../views/Tutorial'
 
 const routes = [
@@ -32,6 +33,12 @@ const routes = [
         path: '/ds/view', 
         name: "DatasetsView",
         component: DatasetsView, 
+        meta: { transition: 'fade' }
+    },
+    {
+        path: '/ds/upload',
+        name: "DatasetUpload", 
+        component: DatasetUpload,
         meta: { transition: 'fade' }
     },
     {
