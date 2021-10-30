@@ -2,8 +2,8 @@
     <div id="home"> 
         <section> <!-- A personal assistant software --> 
             <p id="title">Bitna.AI</p>
-            <p id="subtitle">Shining new information and models everyday</p>
-            <img src="../assets/bitna_ai_logo.jpg" alt="Bitna.AI Logo" />
+            <p id="subtitle">Shining light on new information everyday</p>
+            <!-- <img src="../assets/bitna_ai_logo.jpg" alt="Bitna.AI Logo" /> --->
         </section>
 
         <div id="TwoLinks">
@@ -48,12 +48,14 @@ export default {
 <style> 
 p#title {
     color: #FF5349; 
-    font-size: 40px;
+    font-size: 60px;
 }
 
 p#subtitle {
     color: rgb(128, 127, 127);
-    font-size: 20px; 
+    font-size: 25px; 
+    margin-top: -10px; 
+    margin-bottom: 100px; 
 }
 
 .linkSection {

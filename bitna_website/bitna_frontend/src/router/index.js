@@ -5,9 +5,6 @@ import DatasetsMain from '../views/Datasets/DatasetsMain'
 import DatasetCreation from '../views/Datasets/DatasetCreation'
 import DatasetsView from '../views/Datasets/DatasetsView'
 import DatasetUpload from '../views/Datasets/DatasetUpload'
-import ModelsMain from '../views/Models/ModelsMain'
-import ModelCreation from '../views/Models/ModelCreation'
-import ModelsView from '../views/Models/ModelsView'
 import Tutorial from '../views/Tutorial'
 
 const routes = [
@@ -39,24 +36,6 @@ const routes = [
         path: '/ds/upload',
         name: "DatasetUpload", 
         component: DatasetUpload,
-        meta: { transition: 'fade' }
-    },
-    {
-        path: '/models', 
-        name: "ModelsMain", 
-        component: ModelsMain, 
-        meta: { transition: 'fade' }
-    }, 
-    {
-        path: '/models/create',
-        name: "ModelCreation", 
-        component: ModelCreation, 
-        meta: { transition: 'fade' }
-    }, 
-    {
-        path: '/models/view', 
-        name: "ModelsView", 
-        component: ModelsView, 
         meta: { transition: 'fade' }
     },
     {
