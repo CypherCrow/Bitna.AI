@@ -6,6 +6,8 @@
 if []
 then 
     chmod +x 
+
+    pip install virtualenv 
 else
     echo "You are good to go! :)"
 fi

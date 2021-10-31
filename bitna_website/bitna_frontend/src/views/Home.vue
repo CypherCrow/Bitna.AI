@@ -6,19 +6,13 @@
             <!-- <img src="../assets/bitna_ai_logo.jpg" alt="Bitna.AI Logo" /> --->
         </section>
 
-        <div id="TwoLinks">
+        <div id="ThreeLinks">
             <header>What Do You Want to Check Out?</header>
             <div class="linkSection">
                 <Button @click="toDatasets()" name="Datasets" color="#FF5349" />
-                <Button @click="toModels()" name="Models" color="#FF5349" />
-            </div>
-        </div>
-
-        <div id="OneLink">
-            <header>New User? No Worries!</header>
-            <div class="linkSection">
+                <Button @click="toModel()" name="Models" color="#FF5349" />
                 <Button @click="toTutorial()" name="Tutorial" color="#FF5349" />
-            </div> 
+            </div>
         </div>
     </div> 
 </template>
@@ -35,7 +29,7 @@ export default {
         toDatasets(){
             this.$router.push('/ds')
         }, 
-        toModels(){
+        toModel(){
             this.$router.push('/model')
         }, 
         toTutorial(){
