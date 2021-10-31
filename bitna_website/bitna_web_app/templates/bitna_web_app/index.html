@@ -1,7 +1,13 @@
 <html>
     <body>       
-        {% if dataset %}
+        {% if datasets %}
             <ul>
-        {% for dataset in %}
+            {% for dataset in datasets %}
+                <li><a href="/ds/{{ dataset.id }}/">{{ dataset.}}
+            {% endfor %}
+            </ul>
+        {% else %} 
+            <p>No datasets are available</p>
+        {% endif %} 
     </body>
 </html>

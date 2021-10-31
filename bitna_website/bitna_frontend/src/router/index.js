@@ -5,6 +5,7 @@ import DatasetsMain from '../views/Datasets/DatasetsMain'
 import DatasetCreation from '../views/Datasets/DatasetCreation'
 import DatasetsView from '../views/Datasets/DatasetsView'
 import DatasetUpload from '../views/Datasets/DatasetUpload'
+import Model from '../views/Model'
 import Tutorial from '../views/Tutorial'
 
 const routes = [
@@ -38,6 +39,12 @@ const routes = [
         component: DatasetUpload,
         meta: { transition: 'fade' }
     },
+    {
+        path: '/model', 
+        name: "Model", 
+        component: Model, 
+        meta: { transition: 'fade' }
+    }, 
     {
         path: '/tutorial',
         name: "Tutorial", 

@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('bitna/', include('bitna_web_app.urls'))
+    path('', include('bitna_web_app.urls'))
 ]

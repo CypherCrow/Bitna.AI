@@ -2,7 +2,7 @@
     <div id="home"> 
         <section> <!-- A personal assistant software --> 
             <p id="title">Bitna.AI</p>
-            <p id="subtitle">Shining light on new information everyday</p>
+            <p id="subtitle">Shining new revelations</p>
             <!-- <img src="../assets/bitna_ai_logo.jpg" alt="Bitna.AI Logo" /> --->
         </section>
 
@@ -36,7 +36,7 @@ export default {
             this.$router.push('/ds')
         }, 
         toModels(){
-            this.$router.push('/models')
+            this.$router.push('/model')
         }, 
         toTutorial(){
             this.$router.push('/tutorial')

@@ -57,11 +57,5 @@ div#creation {
     margin: 3.5em 0;
 }
 
-div#buttons {
-    margin-top: 3.5em; 
-    display: flex; 
-    flex-direction: row;
-    justify-content: center;
-}
 
 </style>
