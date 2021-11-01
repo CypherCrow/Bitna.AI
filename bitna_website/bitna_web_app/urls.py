@@ -4,5 +4,5 @@ from bitna_web_app import views
 
 urlpatterns = [
     path('', views.index, name='index'), 
-    path('api/datasets', views.Datasets.as_view())
+    path('datasets/', views.Datasets.as_view())
 ] 

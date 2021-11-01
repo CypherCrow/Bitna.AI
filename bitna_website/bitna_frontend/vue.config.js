@@ -13,8 +13,11 @@ module.exports = {
             }
         }
     },
-    
+
     chainWebpack: (config) => {
+
+        config.optimization.splitChunks(false)
+
         config
             .plugin("BundleTracker")
             .use(BundleTracker, [{ filename: "./webpack-stats.json"}])

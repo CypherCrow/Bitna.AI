@@ -6,23 +6,25 @@
 
         <div id="creation"> 
             <h4>Upload Dataset</h4> 
-            <input type="text" v-model="file" />
+            <input type="text" v-model="form.file" />
             <!-- <label>File
                 <input type="file" @change="handleFileUpload( $event )" /> 
             </label> --> 
 
             <h4>Username</h4>
-            <input type="text" v-model="username" @change="handleUsername( $event )" /> 
+            <input type="text" v-model="form.username" @change="handleUsername( $event )" /> 
         </div> 
 
         <div id="buttons">
-            <Button name="Create!" color="green" @click="submitFile()" /> 
-            <Button name="Discard" color="red" /> 
+            <Button name="Upload" color="green" @click="submit()" /> 
+            <Button name="Discard" color="red" @click="clear()" /> 
         </div> 
     </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 import Header from '../../components/Header.vue'
 import Button from '../../components/Button.vue'
 
@@ -33,8 +35,10 @@ export default {
     }, 
     data(){
         return {
-            file: '', 
-            username: ''
+            form: {
+                file: '', 
+                username: ''
+            }
         }
     },
     methods: {
@@ -44,8 +48,18 @@ export default {
         handleUsername( event ){
             this.username = event.target.username;
         },
-        submitFile(){
-
+        submit(){
+            axios.post('/api/datasets', this.form)
+                .then(response => {
+                    return response
+                })
+                .catch(error => {
+                    console.log(error)
+                })
+        }, 
+        clear(){
+            this.form.file = ''
+            this.form.username = ''
         }
     }
 }

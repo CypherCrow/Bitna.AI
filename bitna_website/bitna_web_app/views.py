@@ -1,10 +1,12 @@
 #from django.shortcuts import render
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, JsonResponse, Http404
 from django.shortcuts import render
 from django.template import loader
 
 from rest_framework.views import APIView 
 from rest_framework.response import Response
+
+import json
 
 from .models import Dataset
 from .serializers import DatasetSerializer
@@ -17,6 +19,25 @@ def index(request):
         'dataset_list': dataset_list,
     }
     return HttpResponse(template.render(context, request))
+
+
+def dataset_upload(request):
+    if request.method == "POST":
+
+        data = json.loads(request.body)
+        dataset = data['dataset']
+        username = data['username']
+
+        if dataset and username:
+            response = f"User {username} Submitted dataset {dataset}"
+            return JsonResponse({ "msg": response }, status=201)
+
+        else: 
+            response = "Dataset or username is empty"
+            return JsonResponse({ "err": response }, status=400)
+
+    return render(request, 'dataset-submit.html')
+
 
 class Datasets(APIView): 
     def get(self, request, format=None):
