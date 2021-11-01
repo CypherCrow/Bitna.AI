@@ -8,7 +8,7 @@
             v-for="dataset in datasets"
             :key="dataset.id"
         > 
-            <Card :title="dataset.id" :content="dataset" /> 
+            <Card :title="dataset.dataset" /> 
         </div>
 
     </div>
@@ -36,7 +36,7 @@ export default {
     methods: {
         getDatasets(){
             axios
-                .get('/ds/view/')
+                .get('/api/datasets')
                 .then(response => {
                     this.datasets = response.data
                 })
