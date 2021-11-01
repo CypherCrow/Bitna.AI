@@ -13,27 +13,26 @@ module.exports = {
             }
         }
     },
-    /* 
-    chainWebpack: config => {
-        config.module
-            .rule('images')
-                .use('url-loader')
-                    .loader('url-loader')
-                    .tap(options => )
+    
+    chainWebpack: (config) => {
+        config
+            .plugin("BundleTracker")
+            .use(BundleTracker, [{ filename: "./webpack-stats.json"}])
+
+            config.output.filename("bundle.js")
+
+            config.optimization.splitChunks(false);
+
+            config.resolve.alias.set("__STATIC__", "static")
+
+            config.devServer
+                .public("http://127.0.0.1:8000")
+                .host("127.0.0.1")
+                .port(8000)
+                .hotOnly(true)
+                .watchOptions({ poll: 1000 })
+                .https(false)
+                .disableHostCheck(true)
+                .headers({ "Access-Control-Allow-Origin": ["*"]})
     }
-    publicPath: process.env.NODE_ENV === 'production' ? DEPLOYMENT_PATH : 'http://localhost:8000', 
-    outputDir: '../bitna_website/static/dist',
-
-    devServer: {
-        public: 'localhost:8000', 
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-        }
-    }, 
-
-    configureWebpack: {
-        plugins: [
-            new BundleTracker({ path: __dirname, filename: 'webpack-stats.json' })
-        ]
-    }*/
 }

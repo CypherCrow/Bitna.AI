@@ -1,8 +1,8 @@
-from django.urls import path
+from django.urls import path, include
 
-from . import views 
+from bitna_web_app import views
 
 urlpatterns = [
     path('', views.index, name='index'), 
-    path('<int:dataset_id>/', views.detail, name='detail')
-]
+    path('api/datasets', views.Datasets.as_view())
+] 

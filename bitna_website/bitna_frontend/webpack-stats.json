@@ -1,37 +1,26 @@
 {
   "status": "done",
   "assets": {
-    "img/bitna_ai_logo.c365bc55.jpg": {
-      "name": "img/bitna_ai_logo.c365bc55.jpg",
-      "path": "D:\\Projects\\bitna.ai\\bitna_website\\bitna_website\\static\\dist\\img\\bitna_ai_logo.c365bc55.jpg",
-      "publicPath": "http://localhost:8000/img/bitna_ai_logo.c365bc55.jpg"
-    },
-    "js/app.js": {
-      "name": "js/app.js",
-      "path": "D:\\Projects\\bitna.ai\\bitna_website\\bitna_website\\static\\dist\\js\\app.js",
-      "publicPath": "http://localhost:8000/js/app.js"
-    },
-    "js/chunk-vendors.js": {
-      "name": "js/chunk-vendors.js",
-      "path": "D:\\Projects\\bitna.ai\\bitna_website\\bitna_website\\static\\dist\\js\\chunk-vendors.js",
-      "publicPath": "http://localhost:8000/js/chunk-vendors.js"
+    "bundle.js": {
+      "name": "bundle.js",
+      "path": "D:\\Projects\\Bitna.AI\\bitna_website\\bitna_frontend\\dist\\bundle.js",
+      "publicPath": "/bundle.js"
     },
     "index.html": {
       "name": "index.html",
-      "path": "D:\\Projects\\bitna.ai\\bitna_website\\bitna_website\\static\\dist\\index.html",
-      "publicPath": "http://localhost:8000/index.html"
+      "path": "D:\\Projects\\Bitna.AI\\bitna_website\\bitna_frontend\\dist\\index.html",
+      "publicPath": "/index.html"
     },
     "favicon.ico": {
       "name": "favicon.ico",
-      "path": "D:\\Projects\\bitna.ai\\bitna_website\\bitna_website\\static\\dist\\favicon.ico",
-      "publicPath": "http://localhost:8000/favicon.ico"
+      "path": "D:\\Projects\\Bitna.AI\\bitna_website\\bitna_frontend\\dist\\favicon.ico",
+      "publicPath": "/favicon.ico"
     }
   },
   "chunks": {
     "app": [
-      "js/chunk-vendors.js",
-      "js/app.js"
+      "bundle.js"
     ]
   },
-  "publicPath": "http://localhost:8000/"
+  "publicPath": "/"
 }
