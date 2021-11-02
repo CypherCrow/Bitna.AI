@@ -2,7 +2,7 @@
     <div id="home"> 
         <section> <!-- A personal assistant software --> 
             <p id="title">Bitna.AI</p>
-            <p id="subtitle">Providing the opportunity to shine</p>
+            <p id="subtitle">Let your work shine</p>
             <!-- <img src="../assets/bitna_ai_logo.jpg" alt="Bitna.AI Logo" /> --->
         </section>
 

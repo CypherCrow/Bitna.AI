@@ -51,7 +51,7 @@ export default {
         submit(){
             axios.post('/api/datasets', this.form)
                 .then(response => {
-                    return response
+                    console.log(response)
                 })
                 .catch(error => {
                     console.log(error)

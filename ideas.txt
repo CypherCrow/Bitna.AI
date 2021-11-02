@@ -1,1 +1,5 @@
-Bitna.AI will have its own dataset uploading system.
+- Bitna.AI will have its own dataset uploading system.
+- List of saved configurations of model will enable user to select previous versions
+    - Configurations will be saved as a file 
+    - Configuration names displayed as a list of clickable cards
+        - Like Google Docs and version history

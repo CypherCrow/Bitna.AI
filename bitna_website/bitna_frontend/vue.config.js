@@ -3,7 +3,18 @@ const BundleTracker = require('webpack-bundle-tracker')
 const DEPLOYMENT_PATH = '/static/dist/'
 
 module.exports = {
+
+    /* publicPath: '/static/src/vue/dist',
+    outputDir: path.resolve(__dirname, '../static/src/vue/dist'),
+    filenameHashing: false, 
+    runtimeCompiler: true, */
+
     devServer: {
+        host: '127.0.0.1', 
+        hot: true, 
+        disableHostCheck: true, 
+        https: false,
+        writeToDisk: true, 
         port: 3000,
         proxy: {
             '/api': {
@@ -12,9 +23,10 @@ module.exports = {
                 changeOrigin: true
             }
         }
-    },
+    }, 
 
-    chainWebpack: (config) => {
+    publicPath: '/'
+    /* chainWebpack: (config) => {
 
         config.optimization.splitChunks(false)
 
@@ -35,7 +47,7 @@ module.exports = {
                 .hotOnly(true)
                 .watchOptions({ poll: 1000 })
                 .https(false)
-                .disableHostCheck(true)
+                .disableHostCheck(false)
                 .headers({ "Access-Control-Allow-Origin": ["*"]})
-    }
+    } */
 }

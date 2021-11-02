@@ -14,7 +14,7 @@ from .serializers import DatasetSerializer
 # Create your views here.
 def index(request): 
     dataset_list = Dataset.objects.order_by('-pub_date')
-    template = loader.get_template('bitna_web_app/index.html')
+    template = loader.get_template('templates/bitna_web_app/index.html')
     context = {
         'dataset_list': dataset_list,
     }

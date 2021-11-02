@@ -5,6 +5,10 @@
         <component :is="Component" /> 
       </transition>
     </router-view>
+
+    <div id="bitna-footer">
+      <p id="footer-text">Copyright (c) 2021</p> 
+    </div>
   </div>
 </template>
 
@@ -45,4 +49,9 @@ header {
 .fade-enter, .fade-leave-active {
   opacity: 0; 
 }
+
+#bitna-footer {
+  margin-top: 100px; 
+}
+
 </style>

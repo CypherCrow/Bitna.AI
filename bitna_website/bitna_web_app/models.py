@@ -11,8 +11,14 @@ class Dataset(models.Model):
     user = models.CharField(max_length=200)
     pub_date = models.DateTimeField('Date published')
 
+    class Meta: 
+        ordering = ('dataset',)
+
     def __str__(self): 
         return self.dataset
+
+    def get_abosolute_url(self):
+        return f'/{self.slug}/' # slug = URL address of the dataset
 
     def was_published_recently(self): 
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
