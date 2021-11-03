@@ -8,7 +8,7 @@ from rest_framework.response import Response
 
 import json
 
-from bitna_website.bitna_web_app.apps import BitnaWebAppConfig
+from .apps import BitnaWebAppConfig
 
 from .models import Dataset
 from .serializers import DatasetSerializer
@@ -54,7 +54,7 @@ class CallModel(APIView):
             response = BitnaWebAppConfig.predictor.predict(params)
 
             return JsonResponse(response)
-            
+
 '''def detail(request, dataset_id): 
     try: 
        dataset = Dataset.objects.get(pk=dataset_id)

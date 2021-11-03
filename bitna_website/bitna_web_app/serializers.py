@@ -7,7 +7,7 @@ class DatasetSerializer(serializers.ModelSerializer):
         model = Dataset
         fields = (
             "id", 
+            "dataset_name",
             "dataset_file", 
-            "user", 
             "pub_date"
         )
