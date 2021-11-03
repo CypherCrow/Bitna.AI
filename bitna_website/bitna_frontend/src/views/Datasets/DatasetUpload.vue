@@ -50,7 +50,7 @@ export default {
             this.username = event.target.username;
         },
         submit(){
-            axios.post('/api/datasets', this.form)
+            axios.post('/api/datasets/', this.form)
                 .then(response => {
                     console.log(response)
                 })
