@@ -7,13 +7,13 @@
         <div id="creation"> 
             <h4>Upload Dataset</h4>
             <h5>(Must be in .csv format)</h5> 
-            <input type="text" v-model="form.file" />
+            <input type="file" />
             <!-- <label>File
                 <input type="file" @change="handleFileUpload( $event )" /> 
             </label> --> 
 
-            <h4>Username</h4>
-            <input type="text" v-model="form.username" @change="handleUsername( $event )" /> 
+            <h4>Dataset Name</h4>
+            <input type="text" v-model="form.name" @change="handleName( $event )" /> 
         </div> 
 
         <div id="buttons">
@@ -60,7 +60,7 @@ export default {
         }, 
         clear(){
             this.form.file = ''
-            this.form.username = ''
+            this.form.name = ''
         }
     }
 }
@@ -72,5 +72,11 @@ div#creation {
     margin: 3.5em 0;
 }
 
-
+input {
+    min-width: 300px; 
+    min-height: 20px;
+    border-radius: 5px; 
+    border: 2px solid #FF5349;
+    padding: 5px; 
+}
 </style>

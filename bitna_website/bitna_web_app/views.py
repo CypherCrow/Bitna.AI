@@ -8,6 +8,8 @@ from rest_framework.response import Response
 
 import json
 
+from bitna_website.bitna_web_app.apps import BitnaWebAppConfig
+
 from .models import Dataset
 from .serializers import DatasetSerializer
 
@@ -45,6 +47,14 @@ class Datasets(APIView):
         serializer = DatasetSerializer(datasets, many=True)
         return Response(serializer.data)
 
+class CallModel(APIView): 
+    def get(self, request):
+        if request.method == 'GET': 
+            params = request.GET.get('image_path')
+            response = BitnaWebAppConfig.predictor.predict(params)
+
+            return JsonResponse(response)
+            
 '''def detail(request, dataset_id): 
     try: 
        dataset = Dataset.objects.get(pk=dataset_id)

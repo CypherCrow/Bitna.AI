@@ -17,7 +17,9 @@ export default {
         Button, 
     }, 
     methods: {
-        
+        factoryReset(){
+            this.$state.commit('modelReset')
+        }
     }
 }
 

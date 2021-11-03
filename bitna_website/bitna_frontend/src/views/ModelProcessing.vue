@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        <p>Model processing, please wait...
     </div>
 </template>
 
@@ -11,5 +11,8 @@ export default {
 </script>
 
 <style scoped>
-
+p {
+    font-size: 100px;
+    
+}
 </style>

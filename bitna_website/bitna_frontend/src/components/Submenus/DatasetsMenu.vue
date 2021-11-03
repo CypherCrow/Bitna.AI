@@ -1,9 +1,17 @@
 <template>
     <div class="menu"> 
-        <h2 class="menuHeader">Select Dataset</h2>
+        <h2 class="menuHeader">Select Datasets</h2>
 
-        <select name="datasets" id="datasets"> 
-            <option v-for="dataset in datasets" :key="dataset.id" :value="dataset">dataset.dataset_file</option>
+        <h3>Training</h3>
+        <h4>(To train the model with)</h4>
+        <select name="train_datasets" id="train_datasets"> 
+            <option v-for="dataset in datasets" :key="dataset.id" :value="dataset.dataset_name">dataset.dataset_file</option>
+        </select>
+
+        <h3>Test</h3>
+        <h4>(To test with the model)</h4>
+        <select name="test_datasets" id="test_datasets"> 
+            <option v-for="dataset in datasets" :key="dataset.id" :value="dataset.dataset_name">dataset.dataset_file</option>
         </select>
     </div>
 </template>
@@ -36,5 +44,11 @@ export default {
 </script>
 
 <style scoped>
+
+select {
+    margin: 20px 0;   
+    width: 300px; 
+    height: 50px; 
+}
 
 </style>

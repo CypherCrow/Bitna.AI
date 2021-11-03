@@ -131,7 +131,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'public')
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates/bitna_web_')
+MEDIA_URL = '/uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_URL)
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates/bitna_web_app')
 FRONTEND_DIR = os.path.join(BASE_DIR, 'frontend')
 
 STATICFILES_DIRS = [

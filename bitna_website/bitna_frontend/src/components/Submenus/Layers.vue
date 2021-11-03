@@ -38,7 +38,7 @@ export default {
     border-radius: 10px;
     align-items: center;
     justify-content: center; 
-    padding: 0px 10px;
+    padding: 15px;
     margin: 20px;
     min-width: 500px;
     min-height: 500px; 
