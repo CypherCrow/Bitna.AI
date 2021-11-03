@@ -33,6 +33,16 @@
                 <input type="number" name="outputSize" id="outputSize" min="1" >
             </div>
 
+            <div class="form-row"> 
+                <label for="layerName">Layer Name (for deleting a layer)</label>
+                <select name="layerName" id="layerName">
+                    <option value="LL1">Linear Layer 1</option>
+                    <option value="RL1">ReLU Layer 1</option> 
+                    <option value="FL1">Flatten Layer 1</option>
+                    <option value="RL2">ReLU Layer 2</option>
+                </select>
+            </div> 
+
             <div class="linkSection"> 
                 <Button name="Add" color="green" />
                 <Button name="Delete" color="red" />
@@ -70,9 +80,9 @@ export default {
     padding: 15px;
     margin: 20px;
     min-width: 500px;
-    min-height: 500px; 
+    min-height: 600px; 
     width: 500px; 
-    height: 500px; 
+    height: 600px; 
 }
 
 .menuHeader {

@@ -5,8 +5,8 @@
 
             <div id="nav"> 
                 <router-link to="/">Home</router-link>
-                <router-link to="/ds">Datasets</router-link>
                 <router-link to="/model">Model</router-link>
+                <router-link to="/ds">Datasets</router-link>
                 <router-link to="/tutorial">Tutorial</router-link>
             </div> 
         </div>

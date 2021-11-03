@@ -11,7 +11,7 @@
         </div>
 
         <div id="modelRun">
-            <Button name="Run!" color="green" @click="runModel()" /> 
+            <Button name="Run Model" color="green" @click="runModel()" /> 
         </div>
     </div>
 </template> 
