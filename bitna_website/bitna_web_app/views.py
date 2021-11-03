@@ -8,6 +8,8 @@ from rest_framework.response import Response
 
 import json
 
+#from bitna_website.static.tutorial import get_predictions
+
 from .apps import BitnaWebAppConfig
 
 from .models import Dataset
@@ -27,11 +29,11 @@ def dataset_upload(request):
     if request.method == "POST":
 
         data = json.loads(request.body)
-        dataset = data['dataset']
-        username = data['username']
+        dataset_file = data['dataset_file']
+        dataset_name = data['dataset_name']
 
-        if dataset and username:
-            response = f"User {username} Submitted dataset {dataset}"
+        if dataset_file and dataset_name:
+            response = f"Submitted dataset {dataset_name}"
             return JsonResponse({ "msg": response }, status=201)
 
         else: 
@@ -41,9 +43,21 @@ def dataset_upload(request):
     return render(request, 'dataset-submit.html')
 
 # TO BE IMPLEMENTED IN FUTURE
-def run_model(request): 
-    predicted_labels = None
-    pass
+'''def run_model(request): 
+    predicted = None
+    actual = None
+    
+    try:
+        predicted, actual = get_predictions()
+    except RuntimeError as re: 
+        print(re)
+
+    context = {
+        'Predicted classes' : predicted,
+        'Actual': actual
+    }
+
+    return context'''
 
 class Datasets(APIView): 
     def get(self, request, format=None):
