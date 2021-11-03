@@ -4,7 +4,7 @@
 
         <header>Your Datasets</header> 
 
-        <div
+        <div id="cards"
             v-for="dataset in datasets"
             :key="dataset.id"
         > 
@@ -50,5 +50,11 @@ export default {
 </script>
 
 <style scoped> 
+
+div#cards {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
 
 </style> 

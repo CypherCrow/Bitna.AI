@@ -24,8 +24,10 @@ div#card {
     border: 2px solid #FF5349; 
     border-radius: 10px;
     justify-content: center; 
-    width: 750px;
-    height: 400px;
+    min-width: 500px;
+    min-height: 300px;
+    width: 550px;
+    height: 350px;
     margin: 20px;
     transition-duration: 0.3s; 
 }

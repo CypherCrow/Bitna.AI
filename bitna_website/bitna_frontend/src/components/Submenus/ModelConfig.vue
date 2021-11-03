@@ -1,6 +1,6 @@
 <template>
     <div class="menu"> 
-        <h2 class="menuHeader">Configure</h2>
+        <h2 class="menuHeader">Configure<br/>(stub)</h2>
         <div id="config"> 
             <Button name="Save Configuration" color="green" /> 
             <Button name="Factory Reset" color="red" /> 
