@@ -145,8 +145,8 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates/bitna_web_app')
 FRONTEND_DIR = os.path.join(BASE_DIR, 'frontend')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'dist'), 
     os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'bitna_frontend/dist'), 
 ]
 
 WEBPACK_LOADER = {

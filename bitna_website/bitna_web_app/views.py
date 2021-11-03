@@ -40,6 +40,10 @@ def dataset_upload(request):
 
     return render(request, 'dataset-submit.html')
 
+# TO BE IMPLEMENTED IN FUTURE
+def run_model(request): 
+    predicted_labels = None
+    pass
 
 class Datasets(APIView): 
     def get(self, request, format=None):
