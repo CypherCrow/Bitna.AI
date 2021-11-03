@@ -44,13 +44,6 @@ div#modelMenu {
     align-items: center;
 }
 
-div#buttons {
-    margin-top: 3.5em; 
-    display: flex; 
-    flex-direction: row;
-    justify-content: center;
-}
-
 div#menuMenus {
     display: flex; 
     justify-content: center;
