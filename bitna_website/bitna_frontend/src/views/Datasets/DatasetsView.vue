@@ -8,7 +8,7 @@
             v-for="dataset in datasets"
             :key="dataset.id"
         > 
-            <Card :title="dataset.dataset" :content="dataset.username" /> 
+            <Card :title="dataset.dataset_name" :content="dataset.username" /> 
         </div>
 
     </div>

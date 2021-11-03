@@ -7,15 +7,15 @@ import datetime
 # Create your models here.
 
 class Dataset(models.Model): 
-    dataset = models.CharField(max_length=200)
+    dataset_file = models.CharField(max_length=200)
     user = models.CharField(max_length=200)
     pub_date = models.DateTimeField('Date published')
 
     class Meta: 
-        ordering = ('dataset',)
+        ordering = ('dataset_file',)
 
     def __str__(self): 
-        return self.dataset
+        return self.dataset_file
 
     def get_abosolute_url(self):
         return f'/{self.slug}/' # slug = URL address of the dataset
