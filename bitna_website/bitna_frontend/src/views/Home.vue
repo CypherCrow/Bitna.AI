@@ -3,14 +3,14 @@
         <section> <!-- A personal assistant software --> 
             <p id="title">Bitna.AI</p>
             <p id="subtitle">Let your work shine</p>
-            <!-- <img src="../assets/bitna_ai_logo.jpg" alt="Bitna.AI Logo" /> --->
+            <!-- <img src="../assets/bitna_ai_logo.jpg" alt="Bitna.AI Logo" /> -->
         </section>
 
         <div id="ThreeLinks">
             <header>What Do You Want to Check Out?</header>
             <div class="linkSection">
                 <Button @click="toDatasets()" name="Datasets" color="#FF5349" />
-                <Button @click="toModel()" name="Models" color="#FF5349" />
+                <Button @click="toModel()" name="Model" color="#FF5349" />
                 <Button @click="toTutorial()" name="Tutorial" color="#FF5349" />
             </div>
         </div>

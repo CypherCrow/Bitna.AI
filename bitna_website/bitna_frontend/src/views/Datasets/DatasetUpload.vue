@@ -5,7 +5,8 @@
         <header>Upload Dataset</header>
 
         <div id="creation"> 
-            <h4>Upload Dataset</h4> 
+            <h4>Upload Dataset</h4>
+            <h5>(Must be in .csv format)</h5> 
             <input type="text" v-model="form.file" />
             <!-- <label>File
                 <input type="file" @change="handleFileUpload( $event )" /> 
